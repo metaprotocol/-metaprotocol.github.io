@@ -1,7 +1,5 @@
-
-@font-face {
-	font-family: 'font';
-		url('https://rosagro-tech.github.io/rdsh/fonts/сocoBiker.ttf') format('truetype'), /* Safari, Android, iOS */
+@font-face {font-family: 'font';
+url('https://rosagro-tech.github.io/rdsh/fonts/сocoBiker.ttf') format('truetype'), /* Safari, Android, iOS */
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap');
