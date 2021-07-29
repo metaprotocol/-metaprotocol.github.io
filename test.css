@@ -1,14 +1,12 @@
-@font-face {font-family: 'font';
-url('https://rosagro-tech.github.io/rdsh/fonts/сocoBiker.ttf') format('truetype'), /* Safari, Android, iOS */
-}
+
 
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap');
-body{font-family:'Dobrozrachniy';}
 
 @import url('https://metaprotocol.github.io/fonts/dobro/stylesheet.css');
 
 @import url('https://metaprotocol.github.io/fonts/biker/stylesheet.css');
 
+body{font-family:'Dobrozrachniy';}
 
    span.circle {
     border: 5px solid #ff9c005c;
