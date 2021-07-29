@@ -55,6 +55,7 @@ span.square {
     width: 50vh;
     height: 17vh;
     background-color: #ffffff;
+    text-align: center;
             }
 
 span.square.One {
