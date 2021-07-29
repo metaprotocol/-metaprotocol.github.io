@@ -49,11 +49,13 @@ span.square.Two {
 }
 
 span.square.Three {
-
+    top: 29vh;
+    left: 29vh;
 
 }
 
 span.square.Four {
-
+    top: 31vh;
+    left: 31vh;
 
 }
