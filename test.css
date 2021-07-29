@@ -2,31 +2,44 @@
 body{font-family:'Jura',sans-serif;color:chartreuse;}
 
 
-   span.circleOne {
+   span.circle {
     border: 5px solid #ff9c005c;
-    top: 65vh;
-    left: 30vh;
+
     width: 100px;
     height: 100px;
-   /* background-color: #ff9c005c; */
+    background-color: #fff;
     position: absolute;
     border-radius: 100%;
-                   }
+               }
 
-span.lineOne{
+  span.circle.One{
+    top: 65vh;
+    left: 30vh;
+        }
+
+span.line {
     color: transparent;
     width: 40vh;
     height: 4px;
     /* background-color: #ff9c005c; */
     position: absolute;
-    top: 49.25vh;
-    left: 28.5vh;
+
     transform: rotate(303deg);
     border: 2px solid #ff9c005c;
     z-index: -1;
     border-left: 0;
     border-right: 0;
 }
+
+span.line.One{
+
+    top: 49.25vh;
+    left: 28.5vh;
+
+
+}
+
+
 
 span.square {
     position: absolute;
