@@ -6,7 +6,11 @@
 
 @import url('https://metaprotocol.github.io/fonts/biker/stylesheet.css');
 
-body{font-family:'Dobrozrachniy';}
+body{font-family:'Dobrozrachniy';
+    background-image: url(https://metaprotocol.github.io/media/lab2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
 
    span.circle {
     border: 5px solid #ff9c005c;
