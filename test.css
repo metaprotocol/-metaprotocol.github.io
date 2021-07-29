@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap');
+body{font-family:'Jura',sans-serif;color:chartreuse;}
+
+
+   span.circleOne {
+    border: 5px solid #ff9c005c;
+    top: 65vh;
+    left: 30vh;
+    width: 100px;
+    height: 100px;
+   /* background-color: #ff9c005c; */
+    position: absolute;
+    border-radius: 100%;
+                   }
+
+span.lineOne{
+    color: transparent;
+    width: 40vh;
+    height: 4px;
+    /* background-color: #ff9c005c; */
+    position: absolute;
+    top: 49.25vh;
+    left: 28.5vh;
+    transform: rotate(303deg);
+    border: 2px solid #ff9c005c;
+    z-index: -1;
+    border-left: 0;
+    border-right: 0;
+}
+
+span.square {
+    position: absolute;
+    border: 4px solid #ff9c005c;
+    width: 50vh;
+    height: 17vh;
+    background-color: #ffffff;
+            }
+
+span.square.one {
+
+
+}
+
+span.square.two {
+
+
+}
+
+span.square.three {
+
+
+}
+
+span.square.four {
+
+
+}
