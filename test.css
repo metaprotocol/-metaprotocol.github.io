@@ -49,11 +49,13 @@ span.line.One{
 
 span.square {
     position: absolute;
+   font-size:1,5em;
     border: 4px solid #ff9c005c;
     width: 50vh;
     height: 17vh;
-    background-color: #ffffff;
+    background-color: #ffffffd1;
     text-align: center;
+    font-weight: bolder;
             }
 
 span.square.One {
