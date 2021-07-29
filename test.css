@@ -65,11 +65,12 @@ left: 25vh;
 }
 
 span.square.Two {
-    top: 35vh;
-    left: 23vh;
+    top: 41vh;
+    left: 10vh;
     height: 85px;
-    width: 85px;
+    width: 120px;
     border-radius: 100%;
+    padding-top: 5vh;
 }
 
 span.square.Three {
