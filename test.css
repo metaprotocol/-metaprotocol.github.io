@@ -64,12 +64,11 @@ span.square.Two {
 }
 
 span.square.Three {
-    top: 50vh;
-    left: 35vh;
+    top: 40vh;
+    left: 33vh;
     height: 25px;
     width: 200px;
-
-}
+        }
 
 span.square.Four {
     top: 48vh;
