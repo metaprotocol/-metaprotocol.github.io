@@ -1,8 +1,18 @@
-
 @font-face {
-	font-family: 'font';
-		url('https://rosagro-tech.github.io/rdsh/fonts/сocoBiker.ttf') format('truetype'), /* Safari, Android, iOS */
+	font-family: 'Dobrozrachniy';
+	src: url('WEB/Regular/Dobrozrachniy-Regular.eot'); /* IE 9 Compatibility Mode */
+	src: url('WEB/Regular/Dobrozrachniy-Regular.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('WEB/Regular/Dobrozrachniy-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+		url('WEB/Regular/Dobrozrachniy-Regular.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('TTF/Dobrozrachniy-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+                url('TTF/Dobrozrachniy-Oblique.ttf') format('truetype'), /* Safari, Android, iOS */
+		/*url('WEB/Regular/nfs_mw.svg#nfs_mw') format('svg');*/ /* Chrome < 4, Legacy iOS */
 }
+	body{font-family: 'Dobrozrachniy, Regular';}
+        h1{font-family: 'Dobrozrachniy, Regular';}
+
+	h2{font-family: 'font';}
+        h3{font-family: 'font';}
 
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap');
 body{font-family:'Jura',sans-serif;color:chartreuse;}
