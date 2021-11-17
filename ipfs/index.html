@@ -1,15 +1,7 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" type="text/css" media="all" >
 <script src="https://cdn.jsdelivr.net/npm/ipfs/dist/index.min.js"></script>
 <script>
-    document.addEventListener('DOMContentLoaded', async () => {
-    const node = await Ipfs.create({ repo: 'ipfs-' + Math.random() })
-    window.node = node
-  /*-------------------------------------------------------------------------*/
-    const status = node.isOnline() ? 'online' : 'offline';
-    console.log(`Node status: `+ status);
-  /*-------------------------------------------------------------------------*/
-    const peerInfos = await node.swarm.addrs();
-    console.log(peerInfos['6']);console.log(peerInfos);
+  const peerInfos = await node.swarm.addrs();
     
     
   </script>
@@ -39,7 +31,18 @@ svg{fill:#7fff00;}
 </div>
 
 <script>
-let graph = new window.P2PGraph('.graph');
+  document.addEventListener('DOMContentLoaded', async () => {
+  const node = await Ipfs.create({ repo: 'ipfs-' + Math.random() })
+  window.node = node
+/*-------------------------------------------------------------------------*/
+  const status = node.isOnline() ? 'online' : 'offline'
+  console.log(`Node status: `+ status);
+/*-------------------------------------------------------------------------*/
+
+  console.log(peerInfos['6']);console.log(peerInfos);
+  let graph = new window.P2PGraph('.graph')
+  //peerInfos.forEach(info => {
+/*-------------------------------------------------------------------------*/
 
 graph.add({
 id: 'You',
