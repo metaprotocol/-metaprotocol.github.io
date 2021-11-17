@@ -11402,14 +11402,13 @@ P2PGraph.prototype._update = function () {
     .style('fill', COLORS.nodes.method)
      var peeer = 'link'
   g.append('a')
-    .attr('class', ' text link ')
-    .attr('href', peeer).append('text')
+    .attr('class', 'link')
+    .attr('href', peeer)
+  .append('text')
+    .attr('class', 'text')
     .text(function (d) {
       return d.name
     })
-  g.append('text')
-    .attr('class', 'text')
-
   self._node
     .select('text')
     .attr('font-size', function (d) {
