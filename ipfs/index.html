@@ -1,1 +1,135 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" type="text/css" media="all" >
 
+<script src="https://cdn.jsdelivr.net/npm/ipfs/dist/index.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', async () => {
+    const node = await Ipfs.create({ repo: 'ipfs-' + Math.random() })
+    window.node = node
+  /*-------------------------------------------------------------------------*/
+    const status = node.isOnline() ? 'online' : 'offline';
+    console.log(`Node status: `+ status);
+  /*-------------------------------------------------------------------------*/
+    const peerInfos = await node.swarm.addrs();
+    console.log(peerInfos['6']);console.log(peerInfos);
+    
+    
+  </script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+<script src="https://metaprotocol.github.io/ipfs/peerLink.js"></script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap');
+body
+{font-family: 'Jura',sans-serif;
+color: chartreuse;
+margin: 0;}
+svg{fill:#7fff00;}
+</style>
+
+<body>
+    <div class="wow zoomIn fadeInLeftBig animated" data-wow-duration="5.5" data-wow-offset="5000" data-wow-delay="5.5" style="
+    background-color: azure;
+   /* height: 50vh;
+    width: 100%;*/
+">
+<div class="graph"></div>
+</div>
+
+<script>
+let graph = new window.P2PGraph('.graph');
+
+graph.add({
+id: 'You',
+me: true,
+name: peerInfos['0']['id'].substr(40, 4)
+})
+
+setTimeout(() => {
+graph.add({
+id: 'Thing1',
+me: false,
+name: peerInfos['1']['id'].substr(40, 4)
+})
+graph.connect('You', 'Thing1')
+}, 500)
+
+setTimeout(() => {      
+graph.add({
+id: 'Thing2',
+me: false,
+name: peerInfos['2']['id'].substr(40, 4)
+})
+graph.connect('You', 'Thing2')
+}, 1500)
+
+
+setTimeout(() => {      
+graph.add({
+id: 'Thing3',
+me: false,
+name: peerInfos['3']['id'].substr(40, 4)
+})
+graph.connect('Thing1', 'Thing3')
+}, 3000)
+
+
+setTimeout(() => {      
+graph.add({
+id: 'Thing4',
+me: false,
+name: peerInfos['4']['id'].substr(42, 0)
+})
+graph.connect('Thing1', 'Thing4')
+}, 4000)
+
+
+setTimeout(() => {      
+graph.add({
+id: 'Thing5',
+me: false,
+name: peerInfos['5']['id'].substr(42, 0)
+})
+graph.connect('Thing2', 'Thing5')
+}, 5000)
+
+setTimeout(() => {      
+graph.add({
+id: 'Thing6',
+me: false,
+name: peerInfos['6']['id'].substr(42, 0)
+})
+graph.connect('Thing4', 'Thing6')
+}, 6000)
+
+
+setTimeout(() => {      
+graph.add({
+id: 'Thing7',
+me: false,
+name: peerInfos['7']['id'].substr(1, 2)
+})
+graph.connect('Thing5', 'Thing7')
+}, 7000)
+
+setTimeout(() => {      
+graph.add({
+id: 'Thing8',
+me: false,
+name: peerInfos['8']['id'].substr(1, 2)
+})
+graph.connect('Thing6', 'Thing8')
+}, 8000)
+
+});
+
+/*-------------------------------------------------------------------------*/
+</script>
+
+<div class="graph"></div>
+
+</body>
