@@ -11397,8 +11397,26 @@ P2PGraph.prototype._update = function () {
     .attr('r', function (d) {
       return self._scale() * (d.me ? 15 : 10)
     })
+
+
+/*
+
+function emitTwo(handler, isFn, self, arg1, arg2) {
+  if (isFn)
+    handler.call(self, arg1, arg2);
+  else {
+    var len = handler.length;
+    var listeners = arrayClone(handler, len);
+    for (var i = 0; i < len; ++i)
+      listeners[i].call(self, arg1, arg2);
+  }
+}
+*/
+
     .style('fill', COLORS.nodes.method)
-     var peeer = 'https://gateway.ipfs.io/ipfs/' + text(function (d) {return d.name})
+     var peeer = 'https://gateway.ipfs.io/ipfs/'+.text(function (d {
+      return d.name
+    }
   g.append('a')
     .attr('class', 'link')
     .attr('href', peeer)
