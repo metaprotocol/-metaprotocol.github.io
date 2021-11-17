@@ -40,13 +40,10 @@ svg{fill:#7fff00;}
   const node = await Ipfs.create({ repo: 'ipfs-' + Math.random() })
   window.node = node
   const peerInfos = await node.swarm.addrs(); 
-
-
 /*-------------------------------------------------------------------------*/
   const status = node.isOnline() ? 'online' : 'offline'
   console.log(`Node status: `+ status);
 /*-------------------------------------------------------------------------*/
-
   console.log(peerInfos['6']);console.log(peerInfos);
   let graph = new window.P2PGraph('.graph')
   //peerInfos.forEach(info => {
