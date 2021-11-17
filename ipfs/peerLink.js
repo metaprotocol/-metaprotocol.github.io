@@ -11405,7 +11405,11 @@ P2PGraph.prototype._update = function () {
     .text(function (d) {
       return d.name
     })
-
+  g.append('text')
+    .attr('class', 'text')
+    .text(function (d) {
+      return d.name
+    })
   self._node
     .select('text')
     .attr('font-size', function (d) {
