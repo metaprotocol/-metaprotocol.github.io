@@ -11400,7 +11400,7 @@ P2PGraph.prototype._update = function () {
       return self._scale() * (d.me ? 15 : 10)
     })
     .style('fill', COLORS.nodes.method)
-     var peeer = 'link'
+     var peeer = 'https://gateway.ipfs.io/ipfs/' + .text(function (d) {return d.name})
   g.append('a')
     .attr('class', 'link')
     .attr('href', peeer)
