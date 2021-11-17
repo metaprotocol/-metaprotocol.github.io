@@ -11400,6 +11400,7 @@ P2PGraph.prototype._update = function () {
     .style('fill', COLORS.nodes.method)
      var peeer = 'link'
   g.append('a')
+    .attr('class', 'link')
     .attr('href', peeer)
     .text(function (d) {
       return d.name
