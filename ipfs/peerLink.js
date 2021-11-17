@@ -25,6 +25,7 @@ if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}el
         while (i--) array[i] = list[i];
         return array;
       };
+
     }
   }
   if (!Date.now) Date.now = function() {
