@@ -11402,9 +11402,6 @@ P2PGraph.prototype._update = function () {
   g.append('a')
     .attr('class', 'link')
     .attr('href', peeer)
-    .text(function (d) {
-      return d.name
-    })
   g.append('text')
     .attr('class', 'text')
     .text(function (d) {
