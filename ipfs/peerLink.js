@@ -11415,20 +11415,15 @@ function emitTwo(handler, isFn, self, arg1, arg2) {
 
     .style('fill', COLORS.nodes.method)
      var peeer = 'https://gateway.ipfs.io/ipfs/'
-     function peer1 {
-
-
-  document.addEventListener('DOMContentLoaded', async () => {
-  const node = await Ipfs.create({ repo: 'ipfs-' + Math.random() })
-  window.node = node
-  const peerInfos = await node.swarm.addrs(); 
-
-let pir1 = peeer + peerInfos['0']['id']
-return pir1
-
-});
-
-        }
+     function peer1 (
+              document.addEventListener('DOMContentLoaded', async () => {
+     const node = await Ipfs.create({ repo: 'ipfs-' + Math.random() })
+                      window.node = node
+     const peerInfos = await node.swarm.addrs(); 
+     let pir1 = peeer + peerInfos['0']['id']
+     return pir1
+                 });
+               }
    peer1()
   g.append('a')
     .attr('class', 'link' )
