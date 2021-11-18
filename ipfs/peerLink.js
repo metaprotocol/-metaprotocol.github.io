@@ -11417,7 +11417,9 @@ function emitTwo(handler, isFn, self, arg1, arg2) {
     .style('fill', COLORS.nodes.method)
      var peeer = 'https://gateway.ipfs.io/ipfs/'
   g.append('a')
-    .attr('class', 'link')
+    .attr('class', 'link' + function (d) {
+      return d.name
+    })
     .attr('href', peeer)
   .append('text')
     .attr('class', 'text')
